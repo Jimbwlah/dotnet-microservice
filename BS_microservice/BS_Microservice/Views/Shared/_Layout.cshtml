@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    
+    <!-- Include all assets -->
+    @Styles.Render("~/Assets/css")
+</head>
+<body>
+
+    <!-- Main menu header -->
+    <header>
+        <div class="content-wrapper">
+            <div class="float-left">
+                <p class="site-title">
+                    <a href="~/">BrightStarr API Coding Task</a>
+                </p>
+            </div>
+            <div class="float-right">
+                <nav>
+                    <ul id="menu">
+                        <li>@Html.ActionLink("Info", "Index", "Home", new {area = ""}, null)</li>
+                        <li>@Html.ActionLink("API Docs", "Index", "Help", new {area = ""}, null)</li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main contetn -->
+    @RenderBody()
+
+    <!-- jQuery includes -->
+    @Scripts.Render("~/bundles/jquery")
+</body>
+</html>
