@@ -14,10 +14,7 @@ namespace BS_Api.Services
         /// <returns>The <see cref="LoggingResponse"/>.</returns>
         public LoggingResponse WriteLogMessage(LoggingRequest loggingRequest)
         {
-            var response = new LoggingResponse()
-            {
-                ResponseMessage = "test"
-            };
+            var response = new LoggingResponse();
 
             return response;
         }
