@@ -1,10 +1,11 @@
 ﻿using System.Web.Http;
-using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 
 namespace BS_Microservice
 {
+    using Unity;
+
     /// <summary>
     /// Global startup class
     /// </summary>
@@ -15,10 +16,12 @@ namespace BS_Microservice
         /// </summary>
         protected void Application_Start()
         {
-            AreaRegistration.RegisterAllAreas();
+            // Pass a delegate to the Configure method.
+            GlobalConfiguration.Configure(WebApiConfig.Register);
 
-            WebApiConfig.Register(GlobalConfiguration.Configuration);
-            FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
+            // Disable WebAPI 1
+            // WebApiConfig.Register(GlobalConfiguration.Configuration);
+
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
