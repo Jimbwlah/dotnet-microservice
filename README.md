@@ -7,12 +7,12 @@ Thanks,
 James Milward (james.milward@gmail.com)
 
 # Installation
-- Please give the IUSR account write access for the folder once you upload to your web server so to allow the text file to be written to
+- Please give the IUSR (safety) / Everyone (faster but not safe) account write access for the folder once you deploy locally to IIS so to allow the text file to be written to
 - All packages should be restored via Nuget first
 
 # Todo
 
-The task was capped at 3 hours, I was hoping to add in unit testing and mocking but I didn't want to exceed the alloted time limit.
+The task was capped at 3 hours, I was hoping to add in unit testing and mocking but I didn't want to exceed the allotted time limit.
 
 # Frameworks
 
