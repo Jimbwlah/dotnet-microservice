@@ -2,6 +2,8 @@
 
 namespace BS_Api.Services
 {
+    using BS_Utilities.File;
+
     /// <summary>
     /// The REST logger service
     /// </summary>
@@ -15,6 +17,15 @@ namespace BS_Api.Services
         public LoggingResponse WriteLogMessage(LoggingRequest loggingRequest)
         {
             var response = new LoggingResponse();
+
+            if (TextWriter.WriteText(loggingRequest.Id, loggingRequest.Message, loggingRequest.Date))
+            {
+                response.ResponseMessage = "Message written to log";
+            }
+            else
+            {
+                response.ResponseMessage = "Message could not be written at this time";
+            }
 
             return response;
         }
