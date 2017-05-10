@@ -1,14 +1,14 @@
-﻿using System.Web.Optimization;
-
-namespace BS_Microservice
+﻿namespace BS_Microservice
 {
+    using System.Web.Optimization;
+
     /// <summary>
     /// Bundle configuration
     /// </summary>
     public class BundleConfig
     {
         /// <summary>
-        /// Bundle regitration method
+        /// Bundle registration method
         /// </summary>
         /// <param name="bundles">The bundle collection</param>
         public static void RegisterBundles(BundleCollection bundles)

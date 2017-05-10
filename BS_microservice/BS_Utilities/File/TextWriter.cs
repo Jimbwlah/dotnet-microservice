@@ -1,9 +1,9 @@
-﻿using System;
-using System.IO;
-using System.Web;
-
-namespace BS_Utilities.File
+﻿namespace BS_Utilities.File
 {
+    using System;
+    using System.IO;
+    using System.Web;
+
     /// <summary>
     /// The text writer class
     /// </summary>
@@ -15,7 +15,7 @@ namespace BS_Utilities.File
         /// <param name="id">The id</param>
         /// <param name="message">The message</param>
         /// <param name="date">The date</param>
-        /// <returns></returns>
+        /// <returns>A boolean indicating whether the text was written</returns>
         public static bool WriteText(string id, string message, DateTime date)
         {
             if (!string.IsNullOrEmpty(id) && !string.IsNullOrEmpty(message))

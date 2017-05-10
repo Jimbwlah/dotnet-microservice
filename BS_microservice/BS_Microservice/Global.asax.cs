@@ -1,10 +1,8 @@
-﻿using System.Web.Http;
-using System.Web.Optimization;
-using System.Web.Routing;
-
-namespace BS_Microservice
+﻿namespace BS_Microservice
 {
-    using Unity;
+    using System.Web.Http;
+    using System.Web.Optimization;
+    using System.Web.Routing;
 
     /// <summary>
     /// Global startup class
@@ -20,7 +18,7 @@ namespace BS_Microservice
             GlobalConfiguration.Configure(WebApiConfig.Register);
 
             // Disable WebAPI 1
-            // WebApiConfig.Register(GlobalConfiguration.Configuration);
+            //// WebApiConfig.Register(GlobalConfiguration.Configuration);
 
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);

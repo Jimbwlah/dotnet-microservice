@@ -1,7 +1,7 @@
-﻿using System.Web.Mvc;
-
-namespace BS_Microservice.Controllers
+﻿namespace BS_Microservice.Controllers
 {
+    using System.Web.Mvc;
+
     /// <summary>
     /// The home controller
     /// </summary>
@@ -13,7 +13,7 @@ namespace BS_Microservice.Controllers
         /// <returns>Returns the home page</returns>
         public ActionResult Index()
         {
-            return View();
+            return this.View();
         }
     }
 }

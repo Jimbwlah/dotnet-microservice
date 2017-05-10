@@ -1,8 +1,8 @@
-﻿using System.Web.Mvc;
-using System.Web.Routing;
-
-namespace BS_Microservice
+﻿namespace BS_Microservice
 {
+    using System.Web.Mvc;
+    using System.Web.Routing;
+    
     /// <summary>
     /// Route configuration class
     /// </summary>
@@ -11,7 +11,7 @@ namespace BS_Microservice
         /// <summary>
         /// Route registration
         /// </summary>
-        /// <param name="routes"></param>
+        /// <param name="routes">The <see cref="RouteCollection"/></param>
         public static void RegisterRoutes(RouteCollection routes)
         {
             // Prevent requests for the web resource files such as WebResource.axd or ScriptResource.axd from being passed to a controller.
@@ -21,8 +21,7 @@ namespace BS_Microservice
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
-            );
+                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional });
         }
     }
 }

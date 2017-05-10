@@ -1,7 +1,7 @@
-﻿using BS_Models.API;
-
-namespace BS_Api.Services
+﻿namespace BS_Api.Services
 {
+    using BS_Models.API;
+
     /// <summary>
     /// The logger service
     /// </summary>
@@ -10,7 +10,7 @@ namespace BS_Api.Services
         /// <summary>
         /// Writes a log message from external services
         /// </summary>
-        /// <param name="loggingRequest">The loggin request</param>
+        /// <param name="loggingRequest">The logging request</param>
         /// <returns>The <see cref="LoggingResponse"/>.</returns>
         LoggingResponse WriteLogMessage(LoggingRequest loggingRequest);
     }

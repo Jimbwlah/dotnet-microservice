@@ -1,14 +1,10 @@
-﻿using System.Web.Http;
-using System.Web.Http.Results;
-using BS_Api.Services;
-using BS_Models.API;
-
-namespace BS_Microservice.Controllers
+﻿namespace BS_Microservice.Controllers
 {
-    using System;
     using System.Linq;
-    using System.Net;
-    using System.Net.Http;
+    using System.Web.Http;
+    using System.Web.Http.Results;
+    using BS_Api.Services;
+    using BS_Models.API;
 
     /// <summary>
     /// The logging controller
@@ -21,7 +17,7 @@ namespace BS_Microservice.Controllers
         private readonly ILoggingService _loggingService;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="RestLoggingService"/> class.
+        /// Initializes a new instance of the <see cref="LoggingController" /> class.
         /// </summary>
         /// <param name="loggingService">The <see cref="ILoggingService"/>.</param>
         public LoggingController(ILoggingService loggingService)
@@ -32,7 +28,8 @@ namespace BS_Microservice.Controllers
         /// <summary>
         /// API method to write log messages from external services
         /// </summary>
-        /// <returns></returns>
+        /// <param name="loggingRequest">The logging request object</param>
+        /// <returns>The response formatted as a LoggingResponse object</returns>
         [Route("logging/writelog")]
         [HttpPost]
         public JsonResult<LoggingResponse> WriteLogMessage(LoggingRequest loggingRequest)
@@ -70,7 +67,7 @@ namespace BS_Microservice.Controllers
                     }
                 }
 
-                return this.Json(new LoggingResponse {ResponseMessage = string.Format("{0} - {1}", errorTitle, errorMessage)});
+                return this.Json(new LoggingResponse { ResponseMessage = string.Format("{0} - {1}", errorTitle, errorMessage) });
             }
         }
     }

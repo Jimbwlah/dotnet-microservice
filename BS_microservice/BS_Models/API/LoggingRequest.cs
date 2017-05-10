@@ -1,8 +1,8 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;  
-
-namespace BS_Models.API
+﻿namespace BS_Models.API
 {
+    using System;
+    using System.ComponentModel.DataAnnotations;  
+
     /// <summary>
     /// The logging request model
     /// </summary>
