@@ -1,10 +1,7 @@
 # BS_microservice
-This is my response to the task set -
+This is a small C# microsrvice built using .net and exposes an API that writes log messages from external services to a text file. The messages are to include an id, a date and up to 255 characters of text.
 
->"Using .net develop a microservice exposing an API that writes log messages from external services to >a text file. The messages are to include an id, a date and up to 255 characters of text." 
-
-Thanks, 
-James Milward (james.milward@gmail.com)
+Thanks,
 
 # Installation
 - Please give the IUSR (safety) / Everyone (faster but not safe) account write access for the folder once you deploy locally to IIS so to allow the text file to be written to
