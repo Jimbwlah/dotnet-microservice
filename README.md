@@ -1,5 +1,5 @@
 # BS_microservice
-This is a small C# microsrvice built using .net and exposes an API that writes log messages from external services to a text file. The messages are to include an id, a date and up to 255 characters of text.
+This is a small C# microservice built using .net and exposes an API that writes log messages from external services to a text file. The messages are to include an id, a date and up to 255 characters of text.
 
 Thanks,
 
